@@ -1,0 +1,38 @@
+ {% extends 'blog/base.html' %} 
+
+{% block content %}
+    <h1>New post</h1>
+    <form id="post_form" method="post" action="" enctype="multipart/form-data">
+     {% csrf_token %}
+      {{ form.as_p }}
+      {{ formset.as_table }}
+     
+    
+     <!--{% csrf_token %}
+    {{ form.as_p }}
+    {{ formset.as_table }}
+    {% for hidden in postForm.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+
+    {% for field in postForm %}
+        {{ field }} <br />
+    {% endfor %}
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %} -->
+
+
+    <input type="submit" name="submit" value="Submit" />
+    </form>
+    <!-- <form method="POST" enctype="multipart/form-data">
+    	{% csrf_token %}
+
+        {{ form.as_p }}
+        {{ form.as_table }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form> -->
+
+{% endblock %}

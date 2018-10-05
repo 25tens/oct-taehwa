@@ -1,0 +1,36 @@
+text tspan{
+  font-family: Helvetica, Arial;
+  font-weight: 900;
+
+  animation: textAnim 2s ease infinite;
+  -webkit-animation: textAnim 2s ease infinite;
+}
+
+
+#l2 {
+  animation-delay: .3s;
+  -webkit-animation-delay: .3s;
+}
+#l3 {
+  animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+}
+#l4 {
+  animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+}
+
+
+@keyframes textAnim {
+  0% {font-size: 80px; fill: white;}
+  10% {font-size: 100px; fill: red;}
+  40% {font-size: 70px; fill: orange;}
+  100% {font-size: 80px; fill: white;}
+}
+
+@-webkit-keyframes textAnim {
+  0% {font-size: 80px; fill: white;}
+  10% {font-size: 100px; fill: red;}
+  40% {font-size: 70px; fill: orange;}
+  100% {font-size: 80px; fill: white;}
+}
